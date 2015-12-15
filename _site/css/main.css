@@ -175,6 +175,9 @@ pre {
 .main-menu .active {
   color: #F29105; }
 
+.main-menu, .main-menu .main-menu-first-menu-item {
+  margin-left: 0; }
+
 .wf-loading {
   visibility: hidden; }
 

@@ -254,7 +254,9 @@ pre {
 .main-menu .active {
     color: $theme-color;
 }
-
+.main-menu, .main-menu .main-menu-first-menu-item {
+    margin-left: 0;
+}
 .wf-loading {
     visibility: hidden;
   }
