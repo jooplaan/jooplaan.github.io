@@ -12,9 +12,7 @@ markdown: kramdown
 
 highlighter: pygments
 
-gems:
-  - jekyll-feed
-  - jekyll-paginate
+gems: [jekyll-paginate]
 
 
 # Pagination settings
