@@ -17,8 +17,7 @@ gems:
   - jekyll-paginate
 
 
-# Pagination
-
+# Pagination settings
 paginate: 15
 paginate_path: "/blog/page:num/"
 
