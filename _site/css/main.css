@@ -228,16 +228,11 @@ pre {
     .site-nav .page-link:not(:first-child) {
       margin-left: 10px; }
   @media screen and (max-width: 600px) {
-    .site-nav {
-      position: fixed;
-      top: 0px;
-      right: 10px;
-      text-align: right; }
-      .site-nav:hover .trigger {
-        display: block;
-        padding-bottom: 5px; }
-      .site-nav .page-link {
-        display: line; } }
+    .site-nav:hover .trigger {
+      display: block;
+      padding-bottom: 5px; }
+    .site-nav .page-link {
+      display: line; } }
 
 .header-bar {
   left: 0px;
@@ -316,7 +311,7 @@ pre {
   color: #2698BA; }
   @media screen and (max-width: 800px) {
     .header-bar .main-header {
-      font-size: 6.25em; } }
+      font-size: 3.75em; } }
 
 /**
  * Posts  **********************************************************

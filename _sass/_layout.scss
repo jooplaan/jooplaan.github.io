@@ -33,10 +33,6 @@ color: $theme-color;
         }
     }
     @include media-query($on-palm) {
-        position: fixed;
-        top: 0px;
-        right: 10px;
-        text-align: right;
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
@@ -128,7 +124,7 @@ text-align: center;
     line-height: 0.8;
     color: $blue;
     @include media-query($on-laptop) {
-        font-size: em(100);
+        font-size: em(60);
     }
 }
 
