@@ -1,12 +1,12 @@
 ---
 layout: page
 title: Work
+description: Work in progress
 permalink: /work/
 weight: 10
 class: page-work
 ---
 
-<h2>Work in progress</h2>
 
 Portfolio is under construction.
 
