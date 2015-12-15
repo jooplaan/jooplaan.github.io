@@ -1,0 +1,35 @@
+<header class="site-header">
+
+
+  <div class="wrapper">
+
+
+    <nav class="site-nav">
+      <div class="trigger">
+
+      <ul class="main-menu">
+      {% if page.is_home %}
+      <li><h1 class="site-title site-title-home">Home</h1></li>
+      {% else %}
+      <li><span class="site-title"><a class="page-link" href="{{ site.baseurl }}/">Home</a></span></li>
+      {% endif %}
+
+      {% assign pages = site.pages | sort:"weight"  %}
+
+        {% for p in pages %}
+        {% if p.weight > 0 %}
+          <li>
+            <a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
+              {{ p.title }}
+            </a>
+          </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+
+      </div>
+    </nav>
+
+  </div>
+
+</header>
