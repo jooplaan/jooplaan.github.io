@@ -6,10 +6,14 @@ weight: 10
 class: page-work
 ---
 
+<h2>Work in progress</h2>
+
+Portfolio is under construction.
+
 {% for project in site.portfolio %}
 
 {% if project.redirect %}
-<div class="project">
+<!-- <div class="project">
     <div class="thumbnail">
         <a href="{{ project.redirect }}" target="_blank">
         {% if project.img %}
@@ -24,10 +28,10 @@ class: page-work
         </span>
         </a>
     </div>
-</div>
+</div> -->
 {% else %}
 
-<div class="project ">
+<!-- <div class="project ">
     <div class="thumbnail">
         <a href="{{ site.baseurl }}{{ project.url }}">
         {% if project.img %}
@@ -42,7 +46,7 @@ class: page-work
         </span>
         </a>
     </div>
-</div>
+</div> -->
 
 {% endif %}
 
