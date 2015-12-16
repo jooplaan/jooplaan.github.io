@@ -30,7 +30,9 @@ if (myWelcomeTexts.length > 0) {
 
   // Replace default welcome with random one.
   var welcomeText = document.getElementById('main-header');
-  if (document.getElementById('main-header') !== 'undefined' && show !== '') {
+  if (document.getElementById('main-header') !== 'undefined'
+    && document.getElementById('main-header') !== null
+    && show !== '') {
     document.getElementById('main-header').innerHTML = show;
   }
 }
