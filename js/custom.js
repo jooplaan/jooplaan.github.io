@@ -8,13 +8,13 @@ if (h > 23 && h < 6) {
 }
 
 // Morning.
-if (h > 5 && h < 13) {
+if (h > 5 && h < 12) {
   var myShows = ['Good morning', 'Goeije morn', 'Guid mornin', 'Bom dia',
   'Bonjour', 'Guten Morgen', 'Goede morgen'];
 }
 
 // Afternoon.
-if (h > 12 && h < 18) {
+if (h > 11 && h < 18) {
   var myShows = ['Good afternoon', 'Bona tarda', 'Góðan dag'];
 }
 
