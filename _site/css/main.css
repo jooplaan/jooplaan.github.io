@@ -452,6 +452,23 @@ pre {
   vertical-align: middle;
   font-size: 12px; }
 
+.PageNavigation {
+  font-size: 0.875em;
+  display: block;
+  width: auto;
+  overflow: hidden; }
+
+.PageNavigation a {
+  display: block;
+  width: 70%;
+  float: left;
+  margin: 1em 0; }
+
+.PageNavigation .next {
+  text-align: right;
+  float: right;
+  clear: both; }
+
 /**
  * Syntax highlighting styles
  */
