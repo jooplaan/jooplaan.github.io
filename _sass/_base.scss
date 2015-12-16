@@ -24,6 +24,11 @@ $caption_font_size: 12px;
 $caption_color: #aaa;
 
 /* COLORS  */
+
+$primary_color: #2698BA; // Light blue
+$secondary_color_1: #3652C5; // Dark blue
+$secondary_color_2: #FFC02D; // Dark yellow
+$complement_color: #FF972D; // Orange
 $red:  #FF3636;
 $orange: #F29105;
 $blue: #2698BA;
@@ -37,7 +42,7 @@ $grey-color-light: #ddd;  /* navigation bar border */
 $text-color:     #666;
 $header-color: #333;
 /* Set theme color *************************/
-$theme-color:   $orange;
+$theme-color:   $primary_color;
 
 
 /************************************************************/
@@ -171,17 +176,18 @@ blockquote {
  */
 pre,
 code {
-    font-size: 15px;
-    border-radius: 3px;
+    font-size: em(15);
+    line-height: 1.1;
+    border-radius: em(3);
     background-color: $grey-color-light;
 }
 
 code {
-    padding: 1px 5px;
+    padding: em(1) em(5);
 }
 
 pre {
-    padding: 8px 12px;
+    padding: em(8) em(12);
     overflow-x: scroll;
 
     > code {
