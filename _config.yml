@@ -2,10 +2,15 @@
 title: Joop Laan
 email: joop@kiux.nl
 description:  Web developer & general communication enthusiastic
-baseurl:  # the subpath of your site, e.g. /blog/
-url:  http://www.jooplaan.com/ # the base hostname & protocol for your site
+# the subpath of your site, e.g. /blog/
+baseurl:
+# The base hostname & protocol for your site without slash.
+url:  http://www.jooplaan.com
 twitter_username: j00p
 github_username:  jooplaan
+
+atom_path : /atom.xml
+rss_path : /rss.xml
 
 # Build settings
 markdown: kramdown
