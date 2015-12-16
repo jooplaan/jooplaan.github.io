@@ -20,8 +20,7 @@ if (h >= 12 && h <= 17) {
 
 // Evening.
 if (h >= 18 && h <= 23) {
-  var myWelcomeTexts = ['Good evening', 'Guid evenin', 'Buena nuei', 'Guuten ābend',
-    'Bon nochi', 'Bonsoir', 'Gott kvøld'];
+  var myWelcomeTexts = ['Guid evenin', 'Buena nuei', 'Bonsoir', 'Gott kvøld'];
 }
 
 // Get random welcome text for time of day.

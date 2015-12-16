@@ -12,11 +12,5 @@ The first website I made was HTML only. The second website was using a self made
 
 I decided to make it simple again. This website is made using <a href="https://jekyllrb.com/">Jekyll</a>, a gem for simple, blog-aware, static sites. The website is hosted on <a href="https://github.com/jooplaan/jooplaan.github.io">Github</a>. You can fetch a copy of the complete source from there, if you like. :)
 
-<div class="PageNavigation">
-  {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.id}}">&laquo; {{page.previous.title}}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="next" href="{{page.next.id}}">{{page.next.title}} &raquo;</a>
-  {% endif %}
-</div>
+{% include prev-next.html %}
+

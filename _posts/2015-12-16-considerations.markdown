@@ -10,11 +10,6 @@ The font family I choose to use is <a href="https://daltonmaag.com/library/aller
 
 While I add more content to the website, the details of the typography are worked out: relative size in different contexts, line-height and color. So the next time you visit this website, the typography will be better. But the base is there and it is called Aller (which is French for <em>go</em> :).
 
-<div class="PageNavigation">
-  {% if page.previous.url %}
-    <a class="prev" href="{{page.previous.id}}">&laquo; {{page.previous.title}}</a>
-  {% endif %}
-  {% if page.next.url %}
-    <a class="next" href="{{page.next.id}}">{{page.next.title}} &raquo;</a>
-  {% endif %}
-</div>
+
+{% include prev-next.html %}
+
