@@ -8,7 +8,7 @@ class: page-work
 ---
 
 
-Portfolio is under construction.
+Portfolio is under construction. While I work on the portfolio, I will posts updates to <a href="/blog/">the blog</a> about the progress.
 
 {% for project in site.portfolio %}
 
