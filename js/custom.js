@@ -3,32 +3,36 @@ var d = new Date();
 var h = d.getHours();
 
 // Nighttime.
-if (h > 23 && h < 6) {
-  var myShows = ['Hi nightowl', 'Goeienag', ' Gute Nacht', 'Buenas noches'];
+if (h >= 0 && h <= 5) {
+  var myWelcomeTexts = ['Hi nightowl', 'Goeienag', ' Gute Nacht', 'Buenas noches'];
 }
 
 // Morning.
-if (h > 5 && h < 12) {
-  var myShows = ['Good morning', 'Goeije morn', 'Guid mornin', 'Bom dia',
+if (h >= 6 && h <= 11) {
+  var myWelcomeTexts = ['Good morning', 'Goeije morn', 'Guid mornin', 'Bom dia',
   'Bonjour', 'Guten Morgen', 'Goede morgen'];
 }
 
 // Afternoon.
-if (h > 11 && h < 18) {
-  var myShows = ['Good afternoon', 'Bona tarda', 'Góðan dag'];
+if (h >= 12 && h <= 17) {
+  var myWelcomeTexts = ['Good afternoon', 'Bona tarda', 'Góðan dag'];
 }
 
 // Evening.
-if (h > 17 && h < 0) {
-  var myShows = ['Good evening', 'Guid evenin', 'Buena nuei', 'Guuten ābend',
+if (h >= 18 && h <= 23) {
+  var myWelcomeTexts = ['Good evening', 'Guid evenin', 'Buena nuei', 'Guuten ābend',
     'Bon nochi', 'Bonsoir', 'Gott kvøld'];
 }
 
-// Get random welcome.
-var show = myShows[Math.floor(Math.random() * myShows.length)];
-// Replace default welcome with random one.
-var welcomeText = document.getElementById('main-header');
-if (document.getElementById('main-header') != null && show !== '') {
-  document.getElementById('main-header').innerHTML = show;
+// Get random welcome text for time of day.
+if (myWelcomeTexts.length > 0) {
+  var show = myWelcomeTexts[Math.floor(Math.random() * myWelcomeTexts.length)];
+
+  // Replace default welcome with random one.
+  var welcomeText = document.getElementById('main-header');
+  if (document.getElementById('main-header') !== 'undefined' && show !== '') {
+    document.getElementById('main-header').innerHTML = show;
+  }
 }
+
 
