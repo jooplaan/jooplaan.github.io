@@ -33,7 +33,7 @@ Portfolio is under construction. While I work on the portfolio, I will posts upd
 
 <!-- <div class="project ">
     <div class="thumbnail">
-        <a href="{{ site.baseurl }}{{ project.url }}">
+        <a href="{{ site.baseurl }}{{ project.id }}">
         {% if project.img %}
         <img class="thumbnail" src="{{ project.img }}"/>
         {% else %}

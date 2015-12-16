@@ -10,7 +10,7 @@
 <ul class="post-list">
 {% for poem in site.poetry reversed %}
     <li>
-        <h2><a class="poem-title" href="{{ poem.url | prepend: site.baseurl }}">{{ poem.title }}</a></h2>
+        <h2><a class="poem-title" href="{{ poem.id | prepend: site.baseurl }}/">{{ poem.title }}</a></h2>
         <p class="post-meta">{{ poem.date | date: "%-d %B %Y" }}</p>
       </li>
 {% endfor %}

@@ -9,7 +9,7 @@ class: page-blog
 <ul class="post-list">
     {% for post in site.posts %}
       <li>
-        <h2><a class="" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <h2><a class="" href="{{ post.id | prepend: site.baseurl }}/">{{ post.title }}</a></h2>
         <p class="post-meta">{{ post.date | date: "%-d %B %Y — %H:%M" }}</p>
         <p>{{ post.description }}</p>
         <hr/>
