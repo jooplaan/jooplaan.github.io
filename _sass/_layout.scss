@@ -140,7 +140,7 @@ margin-bottom: $vertical-spacing-unit;
     line-height: 1.4;
     font-weight: normal;
     @include media-query($on-laptop) {
-        font-size: 1.3em;
+        font-size: 2em;
     }
 }
 
@@ -148,7 +148,7 @@ margin-bottom: $vertical-spacing-unit;
     h2 {
         font-size: em(28);
         @include media-query($on-laptop) {
-            font-size: em(28);
+            font-size: em(22);
         }
     }
     h3 {
