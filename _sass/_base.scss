@@ -12,6 +12,7 @@ dl, dd, ol, ul, figure {
 
 /** Variables **********************************************/
 $base-font-family:              "aller-n4", "aller", Helvetica, sans-serif;
+$call-out-font-family:          "aller-display", sans-serif;
 $base-line-height:              1.8em;
 $horizontal-spacing-unit:       50px;
 $vertical-spacing-unit:         40px;
@@ -159,9 +160,9 @@ article a {
  */
 blockquote {
     color: $text-color;
-    border-left: 10px solid $grey-color-light;
+    border-left: $horizontal-spacing-unit / 5 solid $grey-color-light;
     padding-left: $horizontal-spacing-unit / 2;
-    font-size: 18px;
+    font-size: em(16);
     font-style: italic;
 
     > :last-child {
