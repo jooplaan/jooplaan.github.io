@@ -104,6 +104,13 @@ color: $theme-color;
         padding: 0px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
     }
 }
+
+.home .page-content {
+
+    @include media-query($on-laptop) {
+        padding: 0px 0; /* VERTICAL PADDING FOR TITLE ON EVERY PAGE */
+    }
+}
 .page-heading {
 font-size: 20px;
 }
