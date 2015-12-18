@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Profile
+description: Pleased to meet you :)
 permalink: /profile/
 weight: 95
 ---
