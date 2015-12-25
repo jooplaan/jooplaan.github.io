@@ -1,8 +1,11 @@
 # www.jooplaan.com
 A simple theme for showcasing work, emphasis on whitespace & transparency.
 
-<img src="https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master" alt="codeship"/>
 <a href="http://www.jooplaan.com/">Live Demo</a>
+
+
+<img src="https://codeship.com/projects/b6163f40-8d23-0133-f407-1e10e5e69df6/status?branch=master" alt="codeship"/>
+
 
 <hr/>
 
@@ -19,13 +22,13 @@ Three different layouts are included—the poetry layout, for a simple list of e
 ### Portfolio Specifics
 You can easily add full pages for each of the projects in your portfolio. If you want one to link to an external website, create a file for it in _portfolio, and  fil in the YAML front matter as you would for another, but with a redirect, like so:
 
-	---
-	layout: post
-	title: Project
-	description: a project that redirects to another website
-	img:
-	redirect: https://otherpage.com
-	---
+  ---
+  layout: post
+  title: Project
+  description: a project that redirects to another website
+  img:
+  redirect: https://otherpage.com
+  ---
 
 ### Theming
 Six beautiful theme colors have been selected to choose from. The default is red, but quickly change it by editing the _base.scss file in line 40. The color variable are listed there, as well.
@@ -36,7 +39,7 @@ Photo formatting is made simple using rows of a 3-column system. Make photos 1/3
 ### Code Highlighting
 This theme implements Jekyll's built in code syntax highlighting with Pygments. Just use a liquid tag to delineate your code:
 {% highlight python %}
-	code code code
+  code code code
 {% endhighlight %}
 
 
