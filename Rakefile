@@ -1,5 +1,10 @@
 require "reduce"
 
+desc "It needs a default"
+task :default do
+  puts "Hello World!"
+end
+
 desc "Delete _site/"
 task :delete do
   puts "\## Deleting _site/"
