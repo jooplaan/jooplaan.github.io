@@ -1,7 +1,7 @@
 # www.jooplaan.com
 A simple theme for showcasing work, emphasis on whitespace & transparency.
 
-
+<img src="https://codeship.com/projects/YOUR_PROJECT_UUID/status?branch=master" alt="codeship"/>
 <a href="http://www.jooplaan.com/">Live Demo</a>
 
 <hr/>
