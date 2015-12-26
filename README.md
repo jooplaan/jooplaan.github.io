@@ -1,10 +1,9 @@
 # www.jooplaan.com
 A simple theme for showcasing work, emphasis on whitespace & transparency.
 
-<a href="http://www.jooplaan.com/">Live Demo</a>
+[Live Demo](http://www.jooplaan.com/)
 
-
-[![Build Status](https://travis-ci.org/jooplaan/jooplaan.github.io.svg?branch=master)](https://travis-ci.org/jooplaan/jooplaan.github)
+[![Build Status](https://travis-ci.org/jooplaan/jooplaan.github.io.svg?branch=master)](https://travis-ci.org/jooplaan/jooplaan.github.io)
 
 
 <hr/>
