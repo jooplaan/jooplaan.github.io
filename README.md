@@ -1,10 +1,9 @@
 # www.jooplaan.com
 A simple theme for showcasing work, emphasis on whitespace & transparency.
 
-<a href="http://www.jooplaan.com/">Live Demo</a>
+[Live Demo](http://www.jooplaan.com/)
 
-
-<img src="https://codeship.com/projects/b6163f40-8d23-0133-f407-1e10e5e69df6/status?branch=master" alt="codeship"/>
+[![Build Status](https://travis-ci.org/jooplaan/jooplaan.github.io.svg?branch=master)](https://travis-ci.org/jooplaan/jooplaan.github.io)
 
 
 <hr/>

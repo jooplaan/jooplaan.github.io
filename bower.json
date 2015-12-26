@@ -1,0 +1,9 @@
+{
+  "name": "jooplaan.github.io",
+  "version": "0.5",
+  "description": "Website Joop LAan",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {},
+  "private": true
+}
