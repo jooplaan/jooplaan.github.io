@@ -31,6 +31,7 @@ To use this starter project, you'll need the following things installed on your 
 ## Local Installation
 
 Git clone this repository, or download it into a directory of your choice. Inside the directory run
+
 1. `bower install` (reference: .bowerrc and bower.json)
 2. `npm install` (reference: package.json)
 3. `bundle install` (reference: Gemfile and Gemfile.lock)
@@ -39,6 +40,7 @@ Git clone this repository, or download it into a directory of your choice. Insid
 ## Usage
 
 ###Start Gulp
+
 `gulp`
 This will build your Jekyll site, give you file watching, browser synchronization, auto-rebuild, CSS injecting etc.
 
