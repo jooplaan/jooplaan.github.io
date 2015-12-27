@@ -42,6 +42,10 @@
 
 
 @include breakpoint(small) {
+  .flex-video iframe {
+    width: 100%;
+  }
+
   .home-content {
     margin-top: 100px;
     padding: 0 0.5em;
