@@ -54,7 +54,7 @@ var PATHS = {
     // 'assets/vendor/foundation-sites/js/foundation.tooltip.js',
     // 'assets/vendor/foundation-sites/js/foundation.util.box.js',
     // 'assets/vendor/foundation-sites/js/foundation.util.keyboard.js',
-    // 'assets/vendor/foundation-sites/js/foundation.util.mediaQuery.js',
+    'assets/vendor/foundation-sites/js/foundation.util.mediaQuery.js',
     // 'assets/vendor/foundation-sites/js/foundation.util.motion.js',
     // 'assets/vendor/foundation-sites/js/foundation.util.nest.js',
     // 'assets/vendor/foundation-sites/js/foundation.util.timerAndImageLoader.js',

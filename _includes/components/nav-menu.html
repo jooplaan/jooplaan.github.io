@@ -1,0 +1,13 @@
+
+<header class="row expanded main-menu-container">
+  <div class="row main-menu-inner">
+    <div class="medium-8 large-offset-2 columns" id="main-menu">
+      <ul class="dropdown menu" data-dropdown-menu>
+        <li><a href="/" id="main-menu-home">Home</a></li>
+        {% for item in site.data.nav-main %}
+        <li><a href="{{ item.url }}">{{ item.link }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</header>
