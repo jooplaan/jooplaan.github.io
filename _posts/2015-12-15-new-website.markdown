@@ -3,6 +3,7 @@ layout: post
 title:  A new website
 date: 2015-12-15 21:01:00
 description: Yet another website (again?)
+permalink: blog/new-website/
 ---
 In 1997 I build my first website. I took the HTML source from the homepage of XS4ALL, my internet provider at the time. The Internet Archive still has <a href="https://web.archive.org/web/19980210114416/http://www.xs4all.nl/">a copy of that site</a>.
 

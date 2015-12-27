@@ -1,15 +1,7 @@
-<!-- <footer class="site-footer">
+<footer>
+  {% include components/nav-footer.html %}
+  {% include foot.html %}
 
-  <div class="wrapper">
-  	<p></p>
-  </div>
+</footer>
 
-</footer> -->
 
-{% if page.is_home %}
-<script src="/js/welcome-message.js"></script>
-<script src="/js/fittext.js"></script>
-<script type="text/javascript">
-  fitText(document.getElementById('main-header'), 0.8, { minFontSize: '20px', maxFontSize: '200px' })
-</script>
-{% endif %}

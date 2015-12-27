@@ -1,36 +1,5 @@
-<header class="site-header">
+{% include head.html %}
+{% include components/nav-menu.html %}
 
 
-  <div class="wrapper">
 
-
-    <nav class="site-nav">
-      <div class="trigger">
-
-      <ul class="main-menu">
-        <li class="main-menu-first-menu-item">
-      {% if page.is_home %}
-          <h1 class="site-title site-title-home">Home</h1>
-      {% else %}
-          <span class="site-title"><a class="page-link" href="{{ site.baseurl }}/">Home</a></span>
-      {% endif %}
-        </li>
-      {% assign pages = site.pages | sort:"weight"  %}
-
-        {% for p in pages %}
-        {% if p.weight > 0 %}
-          <li>
-            <a {% if p.url == page.url %}class="active"{% endif %} href="{{ p.url }}">
-              {{ p.title }}
-            </a>
-          </li>
-        {% endif %}
-        {% endfor %}
-      </ul>
-
-      </div>
-    </nav>
-
-  </div>
-
-</header>

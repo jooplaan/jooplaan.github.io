@@ -1,0 +1,29 @@
+{
+  "name": "jooplaan.github.io",
+  "version": "0.0.1",
+  "description": "Starting point for a Jekyll site that uses Zurb Foundation's Sass.",
+  "license": "MIT",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.10.0",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-uglify": "^1.5.1",
+    "rimraf": "^2.5.0",
+    "run-sequence": "^1.1.5"
+  },
+  "scripts": {
+    "test": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jooplaan/jooplaan.github.io"
+  },
+  "bugs": {
+    "url": "https://github.com/jooplaan/jooplaan.github.io/issues"
+  }
+}
