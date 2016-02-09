@@ -15,11 +15,13 @@ Portfolio is under construction. While I work on the portfolio, I will posts upd
 <h3><a href="http://constructingthecommons.com/">Constructing the Commons Conference website</a></h3>
 <picture>
   <!-- wide crop -->
+  <!--[if IE 9]><video style="display: none;"><![endif]-->
   <source
     media="(min-width: 600px)"
     srcset="http://res.cloudinary.com/kiux/image/upload/c_fill,q_873,w_1440,bo_1px_solid_black/constructing-the-commons-01_bacwkf.png 600w,
             http://res.cloudinary.com/kiux/image/upload/c_fill,q_873,w_1440,bo_1px_solid_black/constructing-the-commons-01_bacwkf.png 1200w"
     sizes="100vw" />
+  <!--[if IE 9]></video><![endif]-->
   <!-- standard crop -->
   <img
     srcset="http://res.cloudinary.com/kiux/image/upload/f_auto,q_243,w_400/constructing-the-commons-01_bacwkf.png 400w,
