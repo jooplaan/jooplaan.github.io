@@ -24,8 +24,8 @@ Portfolio is under construction. While I work on the portfolio, I will posts upd
   <!--[if IE 9]></video><![endif]-->
   <!-- standard crop -->
   <img
-    srcset="http://res.cloudinary.com/kiux/image/upload/f_auto,q_243,w_400/constructing-the-commons-01_bacwkf.png 400w,
-            http://res.cloudinary.com/kiux/image/upload/f_auto,q_485,w_800/constructing-the-commons-01_bacwkf.png 800w"
+    srcset="http://res.cloudinary.com/kiux/image/upload/f_auto,q_243,w_400,bo_1px_solid_black/constructing-the-commons-01_bacwkf.png 400w,
+            http://res.cloudinary.com/kiux/image/upload/f_auto,q_485,w_800,bo_1px_solid_black/constructing-the-commons-01_bacwkf.png 800w"
     src="http://res.cloudinary.com/kiux/image/upload/f_auto,q_243,w_400/constructing-the-commons-01_bacwkf.png"
     alt="Constructing the Commons Conference website"
     sizes="100vw" />
