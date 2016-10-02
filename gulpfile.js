@@ -172,10 +172,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
 // --------------------------------------------------
 
 gulp.task('build', function(done) {
-  sequence(
-    'clean',
-    ['sass', 'javascript', 'jekyll-build'],
-    done);
+  sequence('clean', ['sass', 'javascript', 'jekyll-build'], done);
 });
 
 // --------------------------------------------------

@@ -31,6 +31,6 @@ With all this in place, I feel I am ready to start designing the [Work section](
 * Decide on project page structure
 * Start designing!
 
-
+{% include disqus-comments.html %}
 
 {% include prev-next.html %}
