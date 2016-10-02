@@ -16,3 +16,7 @@ before_script:
   # install ruby dependencies
   - gem install bundler
   - bundle install
+
+branches:
+  only:
+    - gh-pages
