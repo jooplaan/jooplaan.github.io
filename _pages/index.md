@@ -9,6 +9,6 @@ description: Web developer & general communication enthusiastic
   <h1 class="main-header" id="main-header">Good morning!</h1>
 </div>
 <div class="home-intro">
-  <p>Hi, my name is Joop Laan.</p>
+  <p>Hi, my name is Joop Laan. I live and work in Amsterdam, The Netherlands.</p>
   <p><a href="/blog/">Find my blog</a> or check <a href="/profile/">my profile</a>.</p>
 </div>
