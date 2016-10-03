@@ -47,7 +47,7 @@ exclude:      [
               ]
 # keep_files:  ['.git','.svn']
 gems:         [
-                'jekyll-sitemap',
+                # 'jekyll-sitemap',
                 'jekyll-paginate'
               ]
 # timezone:    nil
@@ -63,16 +63,16 @@ paginate: 15
 paginate_path: "/blog/page:num/"
 
 # Collection settings
-collections:
-  portfolio:
-    output: true
-    permalink: /portfolio/:basename/
-  poetry:
-    output: true
-    permalink: /poetry/:basename/
-  blog:
-    output: true
-    permalink: /blog/:basename/
+# collections:
+#   portfolio:
+#     output: true
+#     permalink: /portfolio/:basename/
+#   poetry:
+#     output: true
+#     permalink: /poetry/:basename/
+#   blog:
+#     output: true
+#     permalink: /blog/:basename/
 
 markdown:      kramdown
 # markdown_ext:  markdown,mkdown,mkdn,mkd,md
