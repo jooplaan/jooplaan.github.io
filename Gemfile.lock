@@ -135,6 +135,7 @@ PLATFORMS
 DEPENDENCIES
   github-pages
   jekyll-paginate
+  jekyll-sitemap
   sass (>= 3.4.3)
 
 BUNDLED WITH

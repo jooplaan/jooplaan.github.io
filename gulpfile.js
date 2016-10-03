@@ -145,8 +145,8 @@ gulp.task('javascript', function() {
 gulp.task('jekyll-build', function(done) {
   browserSync.notify(messages.jekyll);
   // Spawn jekyll commands
-  // return spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
-  //   .on('close', done);
+  return spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
+    .on('close', done);
 });
 
 // --------------------------------------------------

@@ -47,7 +47,7 @@ exclude:      [
               ]
 # keep_files:  ['.git','.svn']
 gems:         [
-                # 'jekyll-sitemap',
+                'jekyll-sitemap',
                 'jekyll-paginate'
               ]
 # timezone:    nil

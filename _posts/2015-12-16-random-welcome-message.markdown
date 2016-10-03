@@ -12,6 +12,4 @@ See this Javascript on how it works.
 
 I am not a Javascript expert and this code can probably be optimized, but hey it works! <a href="/">Reload the homepage a few times</a> to see it in action.
 
-
-
 {% include prev-next.html %}
