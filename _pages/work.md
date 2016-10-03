@@ -28,7 +28,8 @@ Portfolio is under construction. While I work on the portfolio, I will posts upd
         </span>
         </a>
     </div>
-</div> -->
+</div>
+ -->
 {% else %}
 
 <!-- <div class="project ">
@@ -46,8 +47,8 @@ Portfolio is under construction. While I work on the portfolio, I will posts upd
         </span>
         </a>
     </div>
-</div> -->
-
+</div>
+ -->
 {% endif %}
 
 {% endfor %}

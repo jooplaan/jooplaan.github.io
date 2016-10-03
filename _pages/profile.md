@@ -10,9 +10,9 @@ permalink: /profile/
     <img src="/assets/img/joop-laan.jpg" alt="Joop">
   </div>
   <div class="medium-8 medium-pull-4 columns">
-    Currently I work as a senior web developer for <a href="http://www.assistiveware.com/">AssistiveWare</a>. The company’s flagship product, Proloquo2Go, is an award-winning Augmentative and Alternative Communication (AAC) iOS app that provides a &ldquo;voice&rdquo; for people who have difficulty speaking.
+    <p>Currently, I work as a senior web developer for <a href="http://www.assistiveware.com/">AssistiveWare</a>. The company’s flagship product -Proloquo2Go- is an Augmentative and Alternative Communication (AAC) app that provides a &ldquo;voice&rdquo; for people who can not speak.</p>
 
-    Earlier job titles include: Front-End developer, Communication Manager and Interaction Designer. To summarize, I am a communication and tech enthusiast.
+    <p>Earlier job titles include: Front-End developer, Communication Manager and Interaction Designer. To summarize, I am a communication and tech enthusiast.</p>
   </div>
 
 </div>

@@ -8,10 +8,12 @@ var gulp          = require('gulp'),
     notify        = require('gulp-notify'),
     rimraf        = require('rimraf'),
     sequence      = require('run-sequence'),
-    spawn         = require('child_process').spawn,
     sass          = require('gulp-ruby-sass'),
     concat        = require('gulp-concat'),
     uglify        = require('gulp-uglify');
+
+const gutil = require('gulp-util');
+const child = require('child_process');
 
 // --------------------------------------------------
 // General Config
@@ -123,7 +125,6 @@ gulp.task('sass', function() {
 /**
  * Concatenate and minify ALL the JavaScript files
  */
-
 gulp.task('javascript', function() {
   browserSync.notify(messages.javascript);
   gulp.src(PATHS.javascript)
@@ -139,22 +140,31 @@ gulp.task('javascript', function() {
 // Jekyll
 // --------------------------------------------------
 
+
 /**
  * Build the Jekyll Site
  */
-gulp.task('jekyll-build', function(done) {
-  browserSync.notify(messages.jekyll);
-  // Spawn jekyll commands
-  return spawn('bundle', ['exec', 'jekyll', 'build'], {stdio: 'inherit'})
-    .on('close', done);
+gulp.task('jekyll-build', function (done) {
+    browserSync.notify('Building Jekyll');
+    return child.spawn('jekyll', ['build'], {stdio: 'inherit'})
+        .on('close', done);
 });
+
+/**
+ * Rebuild Jekyll & do page reload
+ */
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
+
+
 
 // --------------------------------------------------
 // Browser Sync
 // --------------------------------------------------
 
 /**
- * Wait for jekyll-build, then launch the Server
+ * Wait for jekyll, then launch the Server
  */
 gulp.task('browser-sync', ['jekyll-build'], function() {
   browserSync.init({
@@ -166,6 +176,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
     open: false
   });
 });
+
 
 // --------------------------------------------------
 // Build
