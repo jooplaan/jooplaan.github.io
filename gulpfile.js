@@ -25,8 +25,8 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 // File paths to various assets are defined here.
 var PATHS = {
   pages: [
-    '*.{md,html,yml,xml}',
-    '{_data,_includes,_layouts,_pages,_posts}/**/*.{md,html,yml,xml}',
+    '*.{md,html,yml,xml,markdown}',
+    '{_data,_includes,_layouts,_pages,_posts}/**/*.{md,html,yml,xml,markdown}',
     '!_site/**/*.*',
     '!assets/**/*.*'
   ],

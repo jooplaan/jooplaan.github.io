@@ -21,7 +21,7 @@ rss_path : /rss.xml
 # layouts:     ./_layouts
 include:      [
                 '.htaccess',
-                '_pages'
+                '_pages',
               ]
 
 # exclude from the conversion and from sitemap.xml
