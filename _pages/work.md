@@ -10,7 +10,6 @@ class: page-work
 
 Portfolio is under construction. While I work on the portfolio, I will posts updates to <a href="/blog/">the blog</a> about the progress.
 
-xxx {{ site }}
 {% for project in site.portfolio %}
 
 <div class="project ">
