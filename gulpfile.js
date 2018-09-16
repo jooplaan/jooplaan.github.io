@@ -153,9 +153,9 @@ gulp.task('jekyll-build', function (done) {
 /**
  * Rebuild Jekyll & do page reload
  */
-gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function () {
     browserSync.reload();
-});
+}));
 
 
 
@@ -166,7 +166,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll, then launch the Server
  */
-gulp.task('browser-sync', ['jekyll-build'], function() {
+gulp.task('browser-sync', gulp.series('jekyll-build', function() {
   browserSync.init({
     server: {
       baseDir: '_site/'
@@ -175,7 +175,7 @@ gulp.task('browser-sync', ['jekyll-build'], function() {
     notify: true,
     open: false
   });
-});
+}));
 
 
 // --------------------------------------------------
@@ -209,4 +209,4 @@ gulp.task('watch', function() {
  * Default task, running just `gulp` will build the site and
  * launch BrowserSync and watch files.
  */
-gulp.task('default', ['build', 'browser-sync', 'watch']);
+gulp.task('default', gulp.series('build', 'browser-sync', 'watch'));
