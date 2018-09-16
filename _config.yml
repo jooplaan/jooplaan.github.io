@@ -46,7 +46,7 @@ exclude:      [
                 'assets/vendor/what-input/'
               ]
 # keep_files:  ['.git','.svn']
-gems:         [
+plugins:         [
                 'jekyll-sitemap',
                 'jekyll-paginate'
               ]
