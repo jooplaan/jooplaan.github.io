@@ -1,23 +1,24 @@
-// --------------------------------------------------
-// Load Plugins
-// --------------------------------------------------
+"use strict";
 
-var gulp          = require('gulp'),
-    autoprefixer  = require('gulp-autoprefixer'),
-    browserSync   = require('browser-sync'),
-    notify        = require('gulp-notify'),
-    rimraf        = require('rimraf'),
-    sequence      = require('run-sequence'),
-    sass          = require('gulp-ruby-sass'),
-    concat        = require('gulp-concat'),
-    uglify        = require('gulp-uglify');
+// Load plugins
+const autoprefixer = require("autoprefixer");
+const browsersync = require("browser-sync").create();
+const cp = require("child_process");
+const cssnano = require("cssnano");
+const del = require("del");
+// const eslint = require("gulp-eslint");
+const gulp = require("gulp");
+// const imagemin = require("gulp-imagemin");
+const newer = require("gulp-newer");
+const plumber = require("gulp-plumber");
+const postcss = require("gulp-postcss");
+const rename = require("gulp-rename");
+const sass = require("gulp-sass");
+// const uglify = require("gulp-uglify");
+// const webpack = require("webpack");
+// const webpackconfig = require("./webpack.config.js");
+// const webpackstream = require("webpack-stream");
 
-const gutil = require('gulp-util');
-const child = require('child_process');
-
-// --------------------------------------------------
-// General Config
-// --------------------------------------------------
 
 // Browsers to target when prefixing CSS.
 var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
@@ -71,63 +72,94 @@ var PATHS = {
   ]
 };
 
-// --------------------------------------------------
-// Custom Messages
-// --------------------------------------------------
+// BrowserSync
+function browserSync(done) {
+  browsersync.init({
+    server: {
+      baseDir: "./_site/"
+    },
+    port: 3000
+  });
+  done();
+}
 
-/**
- * Adding custom messages to output to the browserSync status
- */
-var messages = {
-  jekyll: '<span style="color: grey">Running:</span> jekyll',
-  sass: '<span style="color: grey">Running:</span> sass',
-  javascript: '<span style="color: grey">Running:</span> javascript'
-};
+// BrowserSync Reload
+function browserSyncReload(done) {
+  browsersync.reload();
+  done();
+}
 
-// --------------------------------------------------
-// Helpers
-// --------------------------------------------------
+// Clean assets
+function clean() {
+  return del(["./_site/assets/"]);
+}
 
-// Delete the "_site" folder
-// This happens every time a build starts
-gulp.task('clean', function(done) {
-  rimraf('_site', done);
-});
+// CSS task
+function css() {
+  return gulp
+    .src("./assets/scss/**/*.scss")
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(gulp.dest("./_site/assets/css/"))
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(gulp.dest("./_site/assets/css/"))
+    .pipe(browsersync.stream());
+}
 
+// Lint scripts
+function scriptsLint() {
+  return gulp
+    .src(["./assets/js/**/*", "./gulpfile.js"])
+    .pipe(plumber())
+    // .pipe(eslint())
+    // .pipe(eslint.format())
+    // .pipe(eslint.failAfterError());
+}
 
-// --------------------------------------------------
-// Sass
-// --------------------------------------------------
+// Transpile, concatenate and minify scripts
+function scripts() {
+  return (
+    gulp
+      .src(["./assets/js/**/*"])
+      .pipe(plumber())
+      // .pipe(webpackstream(webpackconfig), webpack)
+      // .pipe(uglify())
+      // folder only, filename is specified in webpack config
+      .pipe(gulp.dest("./_site/assets/js/"))
+      .pipe(browsersync.stream())
+  );
+}
 
-/**
- * Compile Sass into CSS
- */
-gulp.task('sass', function() {
-  browserSync.notify(messages.sass);
-  return sass('assets/scss/*.scss', {
-      style: 'compressed',
-      bundleExec: true
-    })
-    .on('error', function (err) {
-      browserSync.notify(err);
-    })
-    .pipe(autoprefixer(COMPATIBILITY))
-    // for live injecting
-    .pipe(gulp.dest('_site/assets/css/'))
-    // for future jekyll builds
-    .pipe(gulp.dest('assets/css/'));
-});
+// Jekyll
+function jekyll() {
+  return cp.spawn("bundle", ["exec", "jekyll", "build"], { stdio: "inherit" });
+}
 
-// --------------------------------------------------
-// JavaScript
-// --------------------------------------------------
+// Watch files
+function watchFiles() {
+  gulp.watch("./assets/scss/**/*", css);
+  gulp.watch("./assets/js/**/*", gulp.series(scriptsLint, scripts));
+  gulp.watch(
+    [
+      "./_includes/**/*",
+      "./_layouts/**/*",
+      "./_pages/**/*",
+      "./_posts/**/*",
+      "./_projects/**/*"
+    ],
+    gulp.series(jekyll, browserSyncReload)
+  );
+}
 
+// Tasks
+gulp.task("css", css);
 /**
  * Concatenate and minify ALL the JavaScript files
  */
 gulp.task('javascript', function() {
   browserSync.notify(messages.javascript);
-  gulp.src(PATHS.javascript)
+  return gulp.src(PATHS.javascript)
     .pipe(concat('all.js'))
     .pipe(uglify({ mangle: false }))
     // for live injecting
@@ -136,77 +168,15 @@ gulp.task('javascript', function() {
     .pipe(gulp.dest('assets/js/'));
 });
 
-// --------------------------------------------------
-// Jekyll
-// --------------------------------------------------
+gulp.task("js", gulp.series(scriptsLint, scripts));
+gulp.task("jekyll", jekyll);
+gulp.task("clean", clean);
 
+// build
+gulp.task(
+  "build",
+  gulp.series(clean, gulp.parallel(css, jekyll, "js"))
+);
 
-/**
- * Build the Jekyll Site
- */
-gulp.task('jekyll-build', function (done) {
-    browserSync.notify('Building Jekyll');
-    return child.spawn('jekyll', ['build'], {stdio: 'inherit'})
-        .on('close', done);
-});
-
-/**
- * Rebuild Jekyll & do page reload
- */
-gulp.task('jekyll-rebuild', gulp.series('jekyll-build', function () {
-    browserSync.reload();
-}));
-
-
-
-// --------------------------------------------------
-// Browser Sync
-// --------------------------------------------------
-
-/**
- * Wait for jekyll, then launch the Server
- */
-gulp.task('browser-sync', gulp.series('jekyll-build', function() {
-  browserSync.init({
-    server: {
-      baseDir: '_site/'
-    },
-    xip: true,
-    notify: true,
-    open: false
-  });
-}));
-
-
-// --------------------------------------------------
-// Build
-// --------------------------------------------------
-
-gulp.task('build', function(done) {
-  sequence('clean', ['sass', 'javascript', 'jekyll-build'], done);
-});
-
-// --------------------------------------------------
-// Watch
-// --------------------------------------------------
-
-/**
- * Watch files for changes, recompile/rebuild and
- * reload the browser
- */
-gulp.task('watch', function() {
-  gulp.watch(PATHS.pages, ['jekyll-build', browserSync.reload]);
-  gulp.watch('assets/img/**/*', ['jekyll-build', browserSync.reload]);
-  gulp.watch('assets/scss/**/*.scss', ['sass', browserSync.reload]);
-  gulp.watch('assets/js/app.js', ['javascript', browserSync.reload]);
-});
-
-// --------------------------------------------------
-// Default
-// --------------------------------------------------
-
-/**
- * Default task, running just `gulp` will build the site and
- * launch BrowserSync and watch files.
- */
-gulp.task('default', gulp.series('build', 'browser-sync', 'watch'));
+// watch
+gulp.task("watch", gulp.parallel(watchFiles, browserSync));
