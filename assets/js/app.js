@@ -30,7 +30,7 @@ if (h >= 6 && h <= 11) {
 
 // Afternoon.
 if (h >= 12 && h <= 17) {
-  var myWelcomeTexts = ['Goede middag', 'Bona tarda', 'Góðan dag'];
+  var myWelcomeTexts = ['Goedemiddag', 'Bona tarda', 'Góðan dag'];
 }
 
 // Evening.
