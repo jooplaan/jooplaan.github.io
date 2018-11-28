@@ -101,6 +101,7 @@ function css() {
     .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(gulp.dest("./_site/assets/css/"))
+    .pipe(rename('app.css'))
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp.dest("./_site/assets/css/"))
