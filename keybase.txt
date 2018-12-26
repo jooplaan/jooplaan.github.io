@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/joop
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://jooplaan.com
+  * I am joop (https://keybase.io/joop) on keybase.
+  * I have a public key ASDOs12idvl_UqS7IqzT0m9afQLKZLhhy2uTkq_BzVNYsAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ceb35da276f97f52a4bb22acd3d26f5a7d02ca64b861cb6b9392afc1cd5358b00a",
+      "host": "keybase.io",
+      "kid": "0120ceb35da276f97f52a4bb22acd3d26f5a7d02ca64b861cb6b9392afc1cd5358b00a",
+      "uid": "5eb2b9334d3395232871427b738cfb19",
+      "username": "joop"
+    },
+    "merkle_root": {
+      "ctime": 1545852747,
+      "hash": "b93ff825762c98807d572b77e31bbffd15927a96c2a54fa4f4b6409978c8de2be29f6d8671d18eb79b827f939bb237becb848c0ab098bd7bbebfdb57bd1fda50",
+      "hash_meta": "b4238482d57a52f0721dc75d5404f78740b7236910d744542ccf519b7d60133b",
+      "seqno": 4196792
+    },
+    "service": {
+      "entropy": "qi7lCgxUBPcyfRUNasQ5Ig9+",
+      "hostname": "jooplaan.com",
+      "protocol": "http:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.12.2"
+  },
+  "ctime": 1545852762,
+  "expire_in": 504576000,
+  "prev": "8ca01ed05a31a6826a945438fadd0c439de51f423a88ea6bd4f522487fc5a507",
+  "seqno": 27,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgzrNdonb5f1KkuyKs09JvWn0CymS4Yctrk5Kvwc1TWLAKp3BheWxvYWTESpcCG8QgjKAe0FoxpoJqlFQ4+t0MQ53lH0I6iOpr1PUiSH/FpQfEINbMItlpfgKB4uqaORiiAfYHwnbOn5ldnRakiqAJxaEQAgHCo3NpZ8RA+43QLMXds1fPBMVyDqU2o+/XZRh8yJEdgIWQ2UxJLxKmuZUcrPZuB5T6aymZxvQcSCPkp/SqP9HC1iO88Xm6B6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICOPjIenQSBDeNrAli9R6uGYh/paTkuZ3hEc9h4pd+wJo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joop
+
+==================================================================
