@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/joop
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://www.jooplaan.com
+  * I am joop (https://keybase.io/joop) on keybase.
+  * I have a public key ASDOs12idvl_UqS7IqzT0m9afQLKZLhhy2uTkq_BzVNYsAo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120ceb35da276f97f52a4bb22acd3d26f5a7d02ca64b861cb6b9392afc1cd5358b00a",
+      "host": "keybase.io",
+      "kid": "0120ceb35da276f97f52a4bb22acd3d26f5a7d02ca64b861cb6b9392afc1cd5358b00a",
+      "uid": "5eb2b9334d3395232871427b738cfb19",
+      "username": "joop"
+    },
+    "merkle_root": {
+      "ctime": 1546771801,
+      "hash": "3caf7647a6c86684f01d371adb9377ccb844ab2c0df79d6d61df79a24e110d9796620d320d22e3f09ef2123487c8ce6f259e3d2b535978b8fe959c4405a5c8cb",
+      "hash_meta": "14b00e55f983385dd960370c7e9e0d56e972c580cdff6aa9c00e0c1fdf56e121",
+      "seqno": 4239457
+    },
+    "service": {
+      "entropy": "UVdpVVhWd7A8PqxFVC9LzyoG",
+      "hostname": "www.jooplaan.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.12.6"
+  },
+  "ctime": 1546771820,
+  "expire_in": 504576000,
+  "prev": "fe19c0fab92dd83f3039fb705e96fcfb3548999e0b4c78950fc383174cd57e87",
+  "seqno": 38,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgzrNdonb5f1KkuyKs09JvWn0CymS4Yctrk5Kvwc1TWLAKp3BheWxvYWTESpcCJsQg/hnA+rkt2D8wOftwXpb8+zVImZ4LTHiVD8ODF0zVfofEIBFy4AzUamiRNyHpsGg8Jcefy7hRixjfu3PzssS5kobvAgHCo3NpZ8RAKXG9OH1NeEyU+CiHBqshtWZPRNJWTerCi3rFtlHsfgUwAiOLNq5bJNkITVJvkTDdB2Iz9E6qrSZT8cA579yKCahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIFl0AO2EEBSzBVzc49eXAfFCLQs4shLiHxU+6QyzjxVIo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joop
+
+==================================================================
