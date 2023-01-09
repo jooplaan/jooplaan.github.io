@@ -1,7 +1,7 @@
 {
-  "name": "example-config",
+  "name": "jl-indiekit-config",
   "version": "1.0.0",
-  "description": "Example configuration for Indiekit",
+  "description": "Configuration for Indiekit",
   "keywords": [
     "indiekit",
     "indieweb"
@@ -27,7 +27,8 @@
     "@indiekit/indiekit": "^1.0.0-alpha",
     "@indiekit/preset-jekyll": "^1.0.0-alpha",
     "@indiekit/store-github": "^1.0.0-alpha",
-    "@indiekit/syndicator-mastodon": "^1.0.0-alpha"
+    "@indiekit/syndicator-mastodon": "^1.0.0-alpha",
+    "dotenv": "^16.0.3"
   },
   "engines": {
     "node": ">=18"

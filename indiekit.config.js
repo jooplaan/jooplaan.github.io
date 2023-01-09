@@ -73,7 +73,7 @@ module.exports = {
 	"@indiekit/syndicator-mastodon": {
 		checked: true,
 		forced: true,
-		url: "https://leibniz.pub/getting-started",
+		url: "https://leibniz.pub/",
 		user: "@joop@leibniz.pub",
 		accessToken: process.env.MASTODON_ACCESS_TOKEN
 	},
