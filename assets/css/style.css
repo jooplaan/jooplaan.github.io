@@ -4,3 +4,8 @@
 .markdown-body .img-portrait {
 	max-width: 250px;
 }
+
+.quote {
+	min-height: 115px;
+	margin-block-start: 4rem;
+}
