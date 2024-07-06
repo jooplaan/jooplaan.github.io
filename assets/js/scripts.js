@@ -1,67 +1,99 @@
-async function getMyFavQuotes() {
-	let divQotd = document.querySelector('#qotd');
-	let url     = 'https://favqs.com/api/quotes/?filter=joop&type=user';
+// Identify the toggle switches
+const toggleDarkModeSwitch = document.querySelector('#checkbox-dark-mode');
+// const toggleImageDisplay = document.querySelector('#checkbox-hide-images');
 
-	utils.getJSON(url).then(function (quotes) {
-		let randQuote     = randomQuote(quotes['quotes']);
-		divQotd.innerHTML = displayQuote(randQuote);
-	}).catch(function (e) {
-		console.error('error - ' + e);
-	});
+// Function to switch dark mode
+function switchDarkMode(e) {
+    if (e.target.checked) {
+        localStorage.setItem('theme', 'dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        localStorage.setItem('theme', 'light');
+        document.documentElement.setAttribute('data-theme', 'light');
+    }
 }
 
-function displayQuote(quote) {
-	let html = ''
-	html += '<blockquote cite="' + quote['url'] + '">';
-	html += '<p>' + quote['body'] + '</p>';
-	html += '<cite>' + quote['author'] + '</cite>';
-	html += '</blockquote>';
-	return html;
+// Function to switch image display
+function switchImageDisplay(e) {
+    if (e.target.checked) {
+        localStorage.setItem('image_display', 'hide');
+        document.documentElement.setAttribute('data-image-display', 'hide');
+        hideImages();
+    } else {
+        localStorage.setItem('image_display', 'show');
+        document.documentElement.setAttribute('data-image-display', 'show');
+        showImages();
+    }
 }
 
-function randomQuote(obj) {
-	var keys = Object.keys(obj);
-	return obj[keys[ keys.length * Math.random() << 0]];
+// Add event listeners for the toggle switches
+toggleDarkModeSwitch.addEventListener('change', switchDarkMode, false);
+// toggleImageDisplay.addEventListener('change', switchImageDisplay, false);
+
+// Function to detect color scheme and apply it on page load
+function detectColorScheme() {
+    let theme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', theme);
+    toggleDarkModeSwitch.checked = theme === 'dark';
 }
 
-let utils = {};
-utils.get = (url) => {
-	return new Promise(function (resolve, reject) {
-		let req = new XMLHttpRequest();
-		req.open('GET', url);
-		req.setRequestHeader('Authorization', 'Token token="87e978b732c0bb81f382495caa143e98"');
-		req.onload = function () {
-			if (req.status == 200) {
-				resolve(req.response);
-			}
-			else {
-				reject(Error('promise error with ' + req.status));
-			}
-		};
-		req.onerror = function (err) {
-			reject(Error('Network Error with ' + url + ': ' + err));
-		};
-		req.send();
-	});
+// Function to detect image display setting and apply it on page load
+function detectImageDisplay() {
+    let imageDisplay = localStorage.getItem('image_display') || 'show';
+    document.documentElement.setAttribute('data-image-display', imageDisplay);
+    toggleImageDisplay.checked = imageDisplay === 'hide';
+    if (imageDisplay === 'hide') {
+        hideImages();
+    } else {
+        showImages();
+    }
 }
 
-utils.getJSON = async function (url) {
-	var data   = {};
-	var string = null;
-	try {
-		string = await utils.get(url);
-	}
-	catch (e) {
-		console.error('error: ' + e);
-	}
-	try {
-		data = JSON.parse(string);
-		success = true;
-	}
-	catch (e) {
-		console.error('parse error');
-	}
-	return data;
+// Hide images and display alt text
+const originalImages = [];
+function hideImages() {
+    document.querySelectorAll('img').forEach(function(img, index) {
+        if (!originalImages[index]) {
+            originalImages[index] = {
+                src: img.src,
+                alt: img.alt,
+                width: img.naturalWidth,
+                height: img.naturalHeight,
+                display: getComputedStyle(img).display // Capture the display style of the image
+            };
+        }
+        let altText = img.getAttribute('alt');
+        let width = img.width;
+        let height = img.height;
+
+        let altTextElement = document.createElement('div');
+        altTextElement.className = 'alt-text';
+        altTextElement.innerText = altText;
+        altTextElement.style.width = width + 'px';
+        altTextElement.style.height = height + 'px';
+        altTextElement.style.display = getComputedStyle(img).display; // Set the display style
+
+        img.parentNode.replaceChild(altTextElement, img);
+    });
 }
 
-getMyFavQuotes();
+// Show images and remove alt text
+function showImages() {
+    document.querySelectorAll('.alt-text').forEach(function(altTextElement, index) {
+        let imgData = originalImages[index];
+        let img = document.createElement('img');
+        img.src = imgData.src;
+        img.alt = imgData.alt;
+        img.width = imgData.width;
+        img.height = imgData.height;
+        img.style.display = imgData.display; // Restore the display style
+
+        altTextElement.parentNode.replaceChild(img, altTextElement);
+    });
+}
+
+// Run functions on page load
+document.addEventListener('DOMContentLoaded', (event) => {
+    detectColorScheme();
+    // detectImageDisplay();
+});
