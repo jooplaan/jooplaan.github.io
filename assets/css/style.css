@@ -9,8 +9,8 @@
 
 /* dark theme */
 [data-theme="dark"] {
-	--font-color: #0182AD;
-	--link-color: #0182AD;
+	--font-color: #0191C1;
+	--link-color: #0191C1;
 	--bg-color: #010414;
 	--header-bg-color: #B40808;
 	--header-contrast-color: #FFC757;
@@ -64,7 +64,7 @@ body {
 
 .portrait {
 	border: 0.54rem solid var(--header-bg-color);
-	border-radius: 25px;
+	border-radius: 25px 0 25px 0;
 	height: 250px;
 	width: 250px;
 }
@@ -81,7 +81,7 @@ header {
 	background: var(--header-bg-color);
 	height: 200px;
 	position: relative;
-	border-radius: 25px;
+	border-radius: 25px 0 25px 0;
 	max-width: 1200px;
 	margin: 0 auto;
 }
